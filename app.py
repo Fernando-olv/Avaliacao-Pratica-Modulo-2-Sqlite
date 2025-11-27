@@ -1,16 +1,3 @@
-"""
-Avaliação – Python + SQLite
-Tema: CRUD em 'alunos'
-
-O que o script deve fazer:
-1) Criar 'escola.db'
-2) Criar tabela 'alunos' -> Seguindo o diagrama
-3) Inserir registros na tabela alunos
-4) Listar todos
-5) Buscar por id
-6) Atualizar registros
-7) Deletar registros
-"""
 
 import sqlite3
 
@@ -41,8 +28,3 @@ print("Alunos:", lista_alunos)
 aluno = conexao.execute("SELECT nome, idade, email FROM alunos where id = 1;")
 print("Aluno 1:", aluno)
 
-#Atualiza o nome do aluno
-conexao.execute("UPDATE alunos set nome = 'Gustavo Paolo' where id = 3;")
-
-#Deleta o nome do aluno
-conexao.execute("DELETE from alunos WHERE id = 1")
